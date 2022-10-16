@@ -1,19 +1,11 @@
-import {tasks as data} from './Task'
-import {useState, useEffect} from 'react'
-function TaskList() {
+function TaskList({tasks}) {
    
-const [tasks, setTasks] = useState([])
-
-useEffect(()=>{
-setTasks(data)
-}, [])
-
 if(tasks.length===0){
     return <h1>No hay tareas aún</h1>
 }
 
   return (
-    <div>
+    <>
         {
             tasks.map(task=>(
                 <div key={task.id}>
@@ -23,7 +15,7 @@ if(tasks.length===0){
          
                 ))
         }
-    </div>
+    </>
   )
 }
 
