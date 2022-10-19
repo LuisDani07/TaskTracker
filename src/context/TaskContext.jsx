@@ -23,7 +23,6 @@ function createTask(task){
 
   return (
     <>
-    <h1>componente context</h1>
        <TaskContext.Provider value={{
         tasks,
         deleteTask,
